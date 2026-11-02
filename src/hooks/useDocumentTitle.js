@@ -38,19 +38,21 @@
  * ============================================================================
  */
 
-import { useEffect, useRef } from "react";
-
-export function useDocumentTitle(title, { restoreOnUnmount = true } = {}) {
-  const originalTitle = useRef(document.title); // (1)
-
-  useEffect(() => {
-    document.title = title; // (2)
-  }, [title]);
-
-  useEffect(() => {
-    const original = originalTitle.current; // (3)
-    return () => {
-      if (restoreOnUnmount) document.title = original;
-    };
-  }, [restoreOnUnmount]); // (4)
-}
+// vvvvvvvvvvvvvvvv UNCOMMENT FROM HERE (fix 1 of 3) vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+// import { useEffect, useRef } from "react";
+//
+// export function useDocumentTitle(title, { restoreOnUnmount = true } = {}) {
+//   const originalTitle = useRef(document.title); // (1)
+//
+//   useEffect(() => {
+//     document.title = title; // (2)
+//   }, [title]);
+//
+//   useEffect(() => {
+//     const original = originalTitle.current; // (3)
+//     return () => {
+//       if (restoreOnUnmount) document.title = original;
+//     };
+//   }, [restoreOnUnmount]); // (4)
+// }
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ UNCOMMENT TO HERE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

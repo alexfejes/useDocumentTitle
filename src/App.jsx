@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 // vvv UNCOMMENT (fix 2 of 3) vvv
-import { useDocumentTitle } from "./hooks/useDocumentTitle.js";
+// import { useDocumentTitle } from "./hooks/useDocumentTitle.js";
 import "./App.css";
 
 const SENDER = "Developer";
@@ -66,11 +66,11 @@ function App() {
    * and as they get marked read.
    */
   // vvv UNCOMMENT (fix 3 of 3) vvv
-  useDocumentTitle(
-    unreadCount > 0
-      ? `(${unreadCount}) New Notifications - Dashboard`
-      : "Dashboard",
-  );
+  // useDocumentTitle(
+  //   unreadCount > 0
+  //     ? `(${unreadCount}) New Notifications - Dashboard`
+  //     : "Dashboard",
+  // );
 
   const markRead = (id) =>
     setMessages((prev) =>
